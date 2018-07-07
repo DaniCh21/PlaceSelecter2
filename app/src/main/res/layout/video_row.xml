@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toStartOf="@+id/addCb"
         app:layout_constraintTop_toTopOf="@+id/listTitleTv"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/ic_edit"
         tools:ignore="VectorDrawableCompat"
         />
 
