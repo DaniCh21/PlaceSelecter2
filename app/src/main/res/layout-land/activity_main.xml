@@ -124,4 +124,22 @@
         app:layout_constraintTop_toTopOf="@+id/noFoneAirImg"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/settingsImgV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings"
+        />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/settingsImgBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@null"
+        />
+
 </android.support.constraint.ConstraintLayout>
