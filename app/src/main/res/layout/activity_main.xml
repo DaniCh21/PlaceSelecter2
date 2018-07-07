@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/peach"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/noFoneAirImg"
+        android:layout_width="162dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:srcCompat="@drawable/ic_airplane" />
+
+    <EditText
+        android:id="@+id/enterCountryEdt"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:hint="Введите страну мечты"
+        android:singleLine="true"
+        android:textColor="@color/darkRed"
+        android:imeOptions="actionDone"
+        android:textColorHint="@color/darkRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noFoneAirImg"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Добавить"
+        android:hint="Добавить в список стран"
+        android:textColor="@color/darkRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterCountryEdt" />
+
+    <Button
+        android:id="@+id/startBtn"
+        style="@style/backgroundDarkerRed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Поехали!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/randomCountryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Japan"
+        android:textColor="@color/countryCol"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/enterCountryEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noFoneAirImg"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/errorMoreTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Введите, пожалуйста, страну с меньшим количеством символов"
+        android:textAllCaps="true"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/enterCountryEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomCountryTv"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/errorNotEnoughTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Сработала блокировка пустых строк, введите страну"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/enterCountryEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomCountryTv"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/addedTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Страна успешно добавлена!"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/enterCountryEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomCountryTv"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/settingsImgV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings"
+        />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/settingsImgBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@null"
+        />
+
+</android.support.constraint.ConstraintLayout>

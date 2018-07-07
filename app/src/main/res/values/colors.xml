@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#bc2121</color>
+    <color name="colorPrimaryDark">#a81a1a</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="peach">#FDF4E3</color>
+    <color name="izum">#50C878</color>
+    <color name="darkRed">#911f47</color>
+    <color name="darkGrey">#69666b</color>
+    <color name="darkerRed">#bc2121</color>
+    <color name="white">#ffffff</color>
+    <color name="countryCol">#820707</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+
+
+
+</resources>
