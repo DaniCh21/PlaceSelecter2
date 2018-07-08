@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/peach">
+    android:background="@color/peach"
+    >
 
 
     <TextView
@@ -15,7 +16,8 @@
         android:layout_marginTop="16dp"
         android:text="Количество стран:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/photoLabelImgV" />
+        app:layout_constraintTop_toBottomOf="@+id/photoLabelImgV"
+        />
 
     <TextView
         android:id="@+id/countryAmountTv"
@@ -28,7 +30,8 @@
         app:layout_constraintStart_toEndOf="@+id/countryAmountLabelTv"
         app:layout_constraintTop_toTopOf="@+id/countryAmountLabelTv"
         app:layout_constraintVertical_bias="0.0"
-        tools:text="8" />
+        tools:text="8"
+        />
 
     <View
         android:id="@+id/devider"
@@ -38,7 +41,8 @@
         android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryAmountLabelTv" />
+        app:layout_constraintTop_toBottomOf="@+id/countryAmountLabelTv"
+        />
 
     <ImageView
         android:id="@+id/photoLabelImgV"
@@ -51,7 +55,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listTitleTv"
-        app:srcCompat="@drawable/ic_airplane" />
+        app:srcCompat="@drawable/ic_airplane"
+        />
 
     <TextView
         android:id="@+id/listTitleTv"
@@ -90,7 +95,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/listTitleTv"
         app:layout_constraintEnd_toStartOf="@+id/addCb"
         app:layout_constraintTop_toTopOf="@+id/listTitleTv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <CheckBox
         android:id="@+id/addCb"
@@ -99,19 +105,21 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        android:buttonTint="@color/colorPrimaryDark"
+        android:buttonTint="@color/colorPrimary"
         android:scaleX="1.70"
         android:scaleY="1.70"
         app:layout_constraintBottom_toBottomOf="@+id/listTitleTv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/listTitleTv" />
+        app:layout_constraintTop_toTopOf="@+id/listTitleTv"
+        />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="261dp" />
+        app:layout_constraintGuide_begin="261dp"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

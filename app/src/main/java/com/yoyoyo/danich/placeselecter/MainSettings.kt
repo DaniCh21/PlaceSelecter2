@@ -13,5 +13,6 @@ class MainSettings : AppCompatActivity() {
 
         recyclerView_main.layoutManager = LinearLayoutManager(this)
         recyclerView_main.adapter = MainAdapter()
-    }
+        }
 }
+
