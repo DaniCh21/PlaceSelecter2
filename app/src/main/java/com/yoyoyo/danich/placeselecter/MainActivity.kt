@@ -9,7 +9,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val countryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
+    private val countryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,25 +36,29 @@ class MainActivity : AppCompatActivity() {
 
         addBtn.setOnClickListener {
             val newCountry = enterCountryEdt.text.toString()
-            if (newCountry.count() in 1..25){
+            when {
+                newCountry.count() in 1..25 -> {
 
-                addedTv.visibleOrInvisible(true)
-                errorMoreTv.visibleOrInvisible(false)
-                errorNotEnoughTv.visibleOrInvisible(false)
+                    addedTv.visibleOrInvisible(true)
+                    errorMoreTv.visibleOrInvisible(false)
+                    errorNotEnoughTv.visibleOrInvisible(false)
 
-                countryList.add(newCountry)
-                enterCountryEdt.text.clear()
-                } else if (newCountry.count() > 25){
+                    countryList.add(newCountry)
+                    enterCountryEdt.text.clear()
+                }
+                newCountry.count() > 25 -> {
 
                     errorMoreTv.visibleOrInvisible(true)
                     errorNotEnoughTv.visibleOrInvisible(false)
                     addedTv.visibleOrInvisible(false)
-                    }else {
+                }
+                else -> {
 
-                        errorNotEnoughTv.visibleOrInvisible(true)
-                        errorMoreTv.visibleOrInvisible(false)
-                        addedTv.visibleOrInvisible(false)
-                        }
+                    errorNotEnoughTv.visibleOrInvisible(true)
+                    errorMoreTv.visibleOrInvisible(false)
+                    addedTv.visibleOrInvisible(false)
+                }
+            }
 
         }
     }
