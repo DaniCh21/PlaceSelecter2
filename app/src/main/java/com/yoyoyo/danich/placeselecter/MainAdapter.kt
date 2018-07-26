@@ -7,11 +7,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+//import android.widget.CheckBox
 import android.widget.ImageButton
 import kotlinx.android.synthetic.main.lists_row.view.*
 
 
-class MainAdapter(val context: Context): RecyclerView.Adapter<CustomViewHolder>() {
+class MainAdapter(private val context: Context): RecyclerView.Adapter<CustomViewHolder>() {
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val readyCountryListLabel = readyCountryListLabels[position]
@@ -20,8 +21,6 @@ class MainAdapter(val context: Context): RecyclerView.Adapter<CustomViewHolder>(
     }
 
     private val europeCountries = arrayListOf("Andorra", "Austria", "Bulgaria", "Cyprus", "Czech Republic", "Finland", "France", "Georgia", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Norway", "Poland", "Portugal", "Slovakia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom")
-
-    /*private val selected*/
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -32,6 +31,19 @@ class MainAdapter(val context: Context): RecyclerView.Adapter<CustomViewHolder>(
             val intent = Intent(context, CountryList::class.java)
             context.startActivity(intent)
         }
+
+//        val addCheckBox = cellForRow.findViewById<CheckBox>(R.id.addCb)
+//        if (addCheckBox.isChecked){
+//
+//            var f = 0
+//            for (i in 1..europeCountries.size){
+//                selectedCountryList.add(europeCountries[f])
+//                f++
+//            }
+//
+//        }
+
+
 
         return CustomViewHolder(cellForRow)
     }

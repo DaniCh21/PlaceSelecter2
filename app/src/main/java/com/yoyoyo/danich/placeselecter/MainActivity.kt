@@ -9,7 +9,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val countryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
+    val selectedCountryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
             errorNotEnoughTv.visibleOrInvisible(false)
             errorMoreTv.visibleOrInvisible(false)
             val random = Random()
-            val randomCountry = random.nextInt(countryList.count())
-            randomCountryTv.text = countryList[randomCountry]
+            val randomCountry = random.nextInt(selectedCountryList.count())
+            randomCountryTv.text = selectedCountryList[randomCountry]
         }
 
         addBtn.setOnClickListener {
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     errorMoreTv.visibleOrInvisible(false)
                     errorNotEnoughTv.visibleOrInvisible(false)
 
-                    countryList.add(newCountry)
+                    selectedCountryList.add(newCountry)
                     enterCountryEdt.text.clear()
                 }
                 newCountry.count() > 25 -> {
