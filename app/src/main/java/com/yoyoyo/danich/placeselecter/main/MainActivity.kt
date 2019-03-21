@@ -1,15 +1,17 @@
-package com.yoyoyo.danich.placeselecter
+package com.yoyoyo.danich.placeselecter.main
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.yoyoyo.danich.placeselecter.MainSettings
+import com.yoyoyo.danich.placeselecter.R
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+var selectedCountryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
 
-    val selectedCountryList = arrayListOf("Japan", "Brazil", "Spain", "Pussia", "Sweden", "USA", "Poland", "Germany", "Italia")
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

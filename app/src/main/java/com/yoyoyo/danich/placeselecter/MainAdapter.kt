@@ -7,7 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-//import android.widget.CheckBox
+import com.yoyoyo.danich.placeselecter.main.selectedCountryList
+import android.widget.CheckBox
 import android.widget.ImageButton
 import kotlinx.android.synthetic.main.lists_row.view.*
 
@@ -32,16 +33,16 @@ class MainAdapter(private val context: Context): RecyclerView.Adapter<CustomView
             context.startActivity(intent)
         }
 
-//        val addCheckBox = cellForRow.findViewById<CheckBox>(R.id.addCb)
-//        if (addCheckBox.isChecked){
-//
-//            var f = 0
-//            for (i in 1..europeCountries.size){
-//                selectedCountryList.add(europeCountries[f])
-//                f++
-//            }
-//
-//        }
+        val addCheckBox = cellForRow.findViewById<CheckBox>(R.id.addCb)                                 //implementation of CheckBox, but list do not changes
+        if (addCheckBox.isChecked){
+
+            var f = 0
+            for (i in europeCountries){
+                selectedCountryList.add(europeCountries[f])
+                f++
+            }
+
+        }
 
 
 
@@ -56,7 +57,7 @@ class MainAdapter(private val context: Context): RecyclerView.Adapter<CustomView
 
 }
 class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view){
-    /*init {
+    /*init {                                                                                            //tapping on view creates intent to new activity
         view.setOnClickListener{
             val intent = Intent(view.context, CountryList::class.java)
             view.context.startActivity(intent)
